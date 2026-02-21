@@ -58,3 +58,27 @@ Todo realizado en un homelab con máquinas virtuales (VirtualBox).
 - Cliente configurado en Fedora
 - Acceso completo a LAN y DMZ desde fuera
 - Pruebas: ping, SSH, HTTP, traceroute vía VPN
+
+
+#### Configuración resumida
+
+1. **OPNsense**  
+   Interfaces WAN/LAN/DMZ → reglas para proxy (3128) y WireGuard (51820)
+
+2. **Squid Proxy**  
+   ACLs básicas + listas webs + reglas por IP y horario + SARG para informes
+
+3. **WireGuard**  
+   Servidor en OPNsense + cliente Fedora → acceso a LAN y DMZ
+
+### Pruebas clave
+
+- Navegación sin proxy → bloqueada  
+- Navegación con proxy → OK (solo webs permitidas)
+- SSH LAN vía VPN → OK  
+- HTTP DMZ vía VPN → OK
+
+## Contenido
+
+- `configs/` → extractos de squid.conf, sarg.conf y wireguard-client.conf  
+- `imagenes/` → diagramas y capturas
