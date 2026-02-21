@@ -1,0 +1,10 @@
+## Cómo lo configuré - resumen muy general de la práctica
+
+- Preparé VMs en VirtualBox + red interna (WAN 10.0.2.15, LAN/DMZ segmentadas).
+- Instalé OPNsense → configuré interfaces, reglas NAT/firewall básicas (ICMP + proxy 3128).
+- En DMZ: `sudo apt install squid` → edit squid.conf (ACLs localnet, Safe_ports, listas webs, reglas IP/horario).
+- Reglas OPNsense: LAN solo a proxy, DMZ salida permitida.
+- Instalé SARG → configuré reports para ver uso proxy.
+- VPN: instancia WireGuard en OPNsense (puerto 51820) + reglas específicas.
+- Cliente Fedora: `sudo dnf install wireguard-tools` → wg0.conf + `wg-quick up wg0`.
+- Verifiqué todo: ping, curl, traceroute, logs Squid, informes SARG.
