@@ -25,7 +25,7 @@ Todo realizado en un homelab con máquinas virtuales (VirtualBox).
 | Componente      | Función principal                             | Tecnología       | IP principal       |
 |-----------------|-----------------------------------------------|------------------|--------------------|
 | Firewall        | Segmentación, NAT, reglas perimetrales        | OPNsense         | WAN: 10.0.2.15     |
-| Proxy           | Control de acceso a Internet + filtrado       | Squid 6.x        | 192.168.200.10:3128|
+| Proxy           | Control de acceso a Internet + filtrado       | Squid 6          | 192.168.200.10:3128|
 | VPN             | Acceso remoto seguro a LAN y DMZ              | WireGuard        | 10.8.0.1 / 10.8.0.2|
 | Cliente LAN     | Pruebas de navegación y accesos               | Fedora           | 192.168.100.10     |
 | Servidor DMZ    | Aloja proxy y página de prueba                | Ubuntu Server    | 192.168.200.10     |
