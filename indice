@@ -1,0 +1,57 @@
+## Índice del proyecto - estructura original de mi proyecto
+
+A continuación muestro el índice exacto del documento completo de la práctica. Se puede ver el orden lógico y los pasos principales que he seguido de principio a fin.
+
+- **Credenciales máquinas virtuales** ...................................................... 4
+- **Mapa lógico de red** ................................................................. 5
+- **Configuración OPNsense** ............................................................ 6
+- **Verificación DMZ después de cambios OPNsense** ................................. 7
+- **Redirección puerto SSH (VirtualBox)** ............................................... 7
+- **Proxy Squid** ........................................................................... 8
+  - Instalación Squid ................................................................. 8
+  - Configuración Squid ............................................................... 8
+  - Prueba curl ....................................................................... 10
+  - Prueba telnet ..................................................................... 11
+- **Configuraciones LAN OPNsense** .................................................... 12
+  - Configurar firewall LAN → DMZ (puerto 3128) ................................. 12
+  - Bloquear acceso directo LAN → Internet .................................... 12
+  - Configurar navegador del cliente desktop ................................... 13
+  - Verificación con proxy activado (salida a Internet) ..................... 14
+  - Verificación con proxy desactivado (sin salida) ....................... 15
+- **ACL de prueba (webs prohibidas)** ................................................. 16
+  - Verificación ACL prohibida PROXY ............................................. 17
+- **Activación de logs Squid** .......................................................... 18
+- **REPTE 2** ............................................................................... 19
+  - Creación ACL’s por IPs y horarios .............................................. 19
+  - Creación ficheros de webs ....................................................... 19
+    - Webs permitidas ............................................................... 19
+    - Webs prohibidas ............................................................. 19
+  - Añadir ACLs de ficheros .......................................................... 20
+  - Pruebas con diferentes IPs y horarios .......................................... 21
+  - Cuadrícula de clientes, horarios y webs permitidos ......................... 21
+  - Instalación SARG .............................................................. 22
+  - Configuración SARG ............................................................. 22
+  - Inicio del SARG en el cliente desktop ............................................ 23
+- **Segunda parte: VPN** .................................................................. 24
+  - **CONFIGURACIÓN SERVIDOR VPN EN OPNsense** ............................... 25
+    - Creación Instancia ........................................................... 25
+    - Creación Peer cliente ......................................................... 26
+    - Habilitación interfaz WireGuard ........................................ 27
+    - Regla abrir puerto VPN en Firewall WAN ................................... 27
+    - Configuración Firewall WireGuard ......................................... 28
+      - Regla 1: SSH a LAN  
+      - Regla 2: Web a DMZ  
+      - Regla 3: SSH a DMZ  
+      - Regla 4: Internet ....................................................... 28
+  - **CONFIGURAR CLIENTE en mi FEDORA** ....................................... 29
+    - Generación claves del cliente ................................................ 29
+    - Instalación WireGuard cliente Fedora .................................... 29
+    - Preparación carpeta con las claves en el cliente ............................ 30
+    - Puesta en marcha conexión/configuración VPN cliente .................... 30
+    - Verificación estado VPN OPNsense .......................................... 31
+- **PRUEBAS DE CONECTIVIDAD** ....................................................... 32
+  - Ping VPN ....................................................................... 32
+  - SSH LAN ....................................................................... 32
+  - Web DMZ ....................................................................... 32
+  - Traceroute Google ........................................................... 33
+  - Traceroute Cloudflare ...................................................... 33
