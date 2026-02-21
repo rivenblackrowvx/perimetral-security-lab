@@ -18,7 +18,7 @@ Implementar una arquitectura de red segura con:
 Todo realizado en un homelab con máquinas virtuales (VirtualBox).
 
 ## Topología de la red
-
+<img width="665" height="707" alt="imagen" src="https://github.com/user-attachments/assets/7a7e8ca2-fdfd-4365-aa13-e8e28374338b" />
 
 ## Componentes principales
 
